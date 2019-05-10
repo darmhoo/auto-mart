@@ -519,3 +519,44 @@ footer ul li a{
     color: #fff;
 
 }
+
+/* Sigup */
+.signup-div{
+    width: 100%;
+
+
+}
+.signup-div h3{
+    font-family: 'Nanum', Gothic, Arial;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 100px;
+    color: #111;
+    text-align: center;
+    text-transform: uppercase;
+}
+.signup-div form{
+    margin: 10px;
+    width: calc(100% - 20px);
+
+}
+.signup-div form input{
+    width: calc(100% - 10px);
+    padding: 2px 4px 4px 4px;
+    margin-bottom: 4px;
+    text-align: center;
+    height: 36px;
+    border-radius: 10px;
+    font-size: 18px;
+    box-shadow: #111111 inset ;
+}
+.signup-div button{
+    width: 100%;
+    margin-top: 16px;
+    font-size: 18px;
+    border-radius: 10px;
+    background-color: #b3d4fc;
+}
+.signup-div p{
+    text-align: center;
+}
