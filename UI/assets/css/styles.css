@@ -558,5 +558,7 @@ footer ul li a{
     background-color: #b3d4fc;
 }
 .signup-div p{
+    margin-top: 16px;
     text-align: center;
+    font-size: 14px;
 }
