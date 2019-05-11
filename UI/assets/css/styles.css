@@ -372,12 +372,13 @@ textarea {
 }
 
 body{
+    background-color: #f3f3f3;
 
 }
 
 
 header{
-    background-color: #fff;
+    background-color: #75878C;
     width: 100%;
     height: 100px;
 }
@@ -385,7 +386,7 @@ header{
 header .header-brand{
     font-family: 'Nanum', Gothic, Arial;
     font-size: 24px;
-    color: #111;
+    color: #CBC78D;
     font-weight: 900;
     text-transform: uppercase;
     display: block;
@@ -408,7 +409,7 @@ header nav ul li{
 header nav ul li a{
     font-family: 'Nanum', Gothic, Arial;
     font-size: 16px;
-    color: #111;
+    color: #4C3139;
     text-transform: uppercase;
 
 }
@@ -440,7 +441,31 @@ header nav ul li a{
         line-height: 60px;
 
     }
+    header li a:hover{
+        background-color: aquamarine;
+        color: #f2f2f2;
+    }
 }
+/* Color Theme Swatches in Hex */
+.heavy-metal-flake-1-hex { color: #CBC78D; }
+.heavy-metal-flake-2-hex { color: #7F7D5E; }
+.heavy-metal-flake-3-hex { color: #75878C; }
+.heavy-metal-flake-4-hex { color: #4C3139; }
+.heavy-metal-flake-5-hex { color: #CB8C9F; }
+
+/* Color Theme Swatches in RGBA */
+.heavy-metal-flake-1-rgba { color: rgba(203, 199, 141, 1); }
+.heavy-metal-flake-2-rgba { color: rgba(126, 124, 93, 1); }
+.heavy-metal-flake-3-rgba { color: rgba(117, 134, 139, 1); }
+.heavy-metal-flake-4-rgba { color: rgba(75, 48, 56, 1); }
+.heavy-metal-flake-5-rgba { color: rgba(203, 140, 158, 1); }
+
+/* Color Theme Swatches in HSLA */
+.heavy-metal-flake-1-hsla { color: hsla(55, 37, 67, 1); }
+.heavy-metal-flake-2-hsla { color: hsla(55, 14, 43, 1); }
+.heavy-metal-flake-3-hsla { color: hsla(194, 8, 50, 1); }
+.heavy-metal-flake-4-hsla { color: hsla(342, 21, 24, 1); }
+.heavy-metal-flake-5-hsla { color: hsla(342, 37, 67, 1); }
 
 /*INDEX*/
 .index-banner{
@@ -477,10 +502,10 @@ header nav ul li a{
 
 }
 .index-features div{
-    margin: 16px 16px 0;
-    width: calc(100% - 32px);
+    margin: 16px 8px 0;
+    width: calc(100% - 24px);
     height: 200px;
-    background-color: #f2f2f2;
+    background-color: #CBC78D;
 
 
 }
@@ -490,14 +515,22 @@ header nav ul li a{
     font-size: 18px;
     font-weight: 600;
     line-height: 100px;
-    color: #111;
+    color: #4C3139;
     text-align: center;
     text-transform: uppercase;
 
 }
 .index-features div p{
     text-align: center;
+    color: #4C3139;
 
+
+}
+@media only screen and (min-width: 1000px) {
+    .index-features div{
+        margin: 8px 4px 0;
+        width: calc(100% - 4px);
+    }
 
 }
 
@@ -507,8 +540,10 @@ footer{
     width: calc(100% - 80px);
     padding: 40px 40px;
     margin-top: 20px;
-    background-color: #111;
+    background-color: #75878C;
     overflow: hidden;
+    color: #CBC78D;
+    display: block;
 }
 footer ul{
     display: block;
@@ -516,8 +551,30 @@ footer ul{
 }
 footer ul li a{
     font-size: 16px;
-    color: #fff;
+    color: #CBC78D;
 
+
+}
+footer small{
+    text-align: center ;
+}
+footer ul li a:visited{
+    color: #CB8C9F;
+}
+@media only screen and (min-width: 1000px) {
+    footer{
+        padding-top: 10px;
+    }
+    footer li{
+        width: calc(100% - 16px);
+        display: inline;
+        font-size: 18px;
+        text-align: center;
+        margin: 0 100px 0 100px;
+    }
+    footer small{
+        text-align: center;
+    }
 }
 
 /* Sigup */
@@ -544,21 +601,84 @@ footer ul li a{
     width: calc(100% - 10px);
     padding: 2px 4px 4px 4px;
     margin-bottom: 4px;
-    text-align: center;
+    text-align: justify;
     height: 36px;
     border-radius: 10px;
     font-size: 18px;
-    box-shadow: #111111 inset ;
+
 }
 .signup-div button{
     width: 100%;
     margin-top: 16px;
     font-size: 18px;
     border-radius: 10px;
-    background-color: #b3d4fc;
+    background-color: #CB8C9F;
+    color: #4C3139;
 }
 .signup-div p{
     margin-top: 16px;
     text-align: center;
     font-size: 14px;
+}
+@media only screen and (min-width: 1000px) {
+    .signup-div{
+        width: 50%;
+        margin: 20px auto;
+        outline: solid 1px #75878C;
+        display: block;
+        border-radius: 10px;
+    }
+    .signup-div button{
+        width: 40%;
+        margin-left: 160px ;
+        margin-right: 160px;
+        font-size: 18px;
+        border-radius: 10px;
+
+        line-height: 24px;
+
+    }
+}
+
+/* DASHBOARD*/
+header small{
+    margin: 0 30px 4px 30px;
+    font-size: 14px;
+}
+.dashboard-nav li:not(:first-child){
+    display: none;
+}
+
+.dashboard-latest-ads{
+    margin: 8px 4px 8px 4px;
+}
+.dashboard-latest-ads h2{
+    text-align: center;
+    font-size: 16px;
+    margin: 2px 4px 2px 4px;
+    width: 100%;
+}
+.ad-card{
+    width: calc(100% - 16px);
+    display: inline-flex;
+    outline: inset #c0c0c0 1px;
+    justify-content: space-between;
+    margin: 4px 0 4px 0;
+    align-items: center;
+
+}
+.ad-card img{
+    width: 80px;
+    height: 60px;
+    flex: 1 1 20%;
+}
+.ad-card h3{
+    align-self: center;
+    text-align: left;
+    flex: 1 1 60%;
+    padding-left: 8px;
+}
+.ad-card p{
+    flex: 1 1 20%;
+    padding-right: 6px;
 }
