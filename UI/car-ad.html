@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AutoMart | Create Post</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+<header id="home">
+    <a href="#home" class="header-brand"> AutoMart</a>
+    <small> Welcome, User</small>
+    <nav class="dashboard-nav">
+        <ul>
+            <li><a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a> </li>
+            <li><a href="#">Post a car</a> </li>
+            <li><a href="#">View latest adds</a> </li>
+            <li></li>
+        </ul>
+    </nav>
+</header>
+<section class="post-form">
+    <h3>Post A Car</h3>
+    <form id="usrform">
+        <div>
+            <label for="car_model">
+                Car Make
+            </label>
+            <input name="car_model" id="car_model" placeholder="Ex: Sienna, Honda">
+        </div>
+        <div>
+            <label for="state">State</label>
+            <select name="state" id="state" >
+                <option>--select--</option>
+                <option>New</option>
+                <option>Fairly used</option>
+            </select>
+
+        </div>
+        <div>
+            <label for="manufacturer">Manufacturer</label>
+            <input id="manufacturer" name="manufacturer">
+        </div>
+        <div>
+            <label for="body_type">Body-Type</label>
+            <input id="body_type" name="body_type">
+        </div>
+        <div>
+            <label for="price">Price</label>
+            <input id="price" name="price" >
+        </div>
+        <div>
+            <label for="description">Description</label>
+            <textarea name="description" form="usrform" placeholder="enter text here..." id="description">
+
+            </textarea>
+        </div>
+        <div>
+            <button id="btn">Submit</button>
+        </div>
+
+
+    </form>
+</section>
+
+
+
+
+</body>
+</html>
