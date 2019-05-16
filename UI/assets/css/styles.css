@@ -561,40 +561,71 @@ footer small{
 /* Sigup */
 .signup-div{
     width: 100%;
+    color: #4C3139;
 
 
 }
 .signup-div h3{
-    font-family: 'Nanum', Gothic, Arial;
+    font-family: 'Roboto', sans-serif;
     font-size: 18px;
     font-weight: 600;
-    line-height: 100px;
-    color: #111;
+    line-height: 72px;
+    color: #4C3139;
     text-align: center;
     text-transform: uppercase;
 }
 .signup-div form{
     margin: 10px;
-    width: calc(100% - 20px);
+    width: calc(100% - 30px);
 
 }
 .signup-div form input{
-    width: calc(100% - 10px);
-    padding: 2px 4px 4px 4px;
-    margin-bottom: 4px;
-    text-align: center;
+    width: calc(100% - 20px);
+    padding: 2px 2px 4px 2px;
+    margin-right: 10px;
+    margin-left: 10px;
     height: 36px;
     border-radius: 10px;
     font-size: 18px;
-    box-shadow: #111111 inset ;
+    box-shadow: #4C3139 ;
+
 }
 .signup-div button{
-    width: 100%;
-    margin-top: 16px;
+    width: 50%;
     font-size: 18px;
+    margin: 4px 80px;
     border-radius: 10px;
-    background-color: #b3d4fc;
+    background-color: #75878C;
+    color: #4C3139;
+
 }
 .signup-div p{
     text-align: center;
 }
+
+@media only screen and (min-width: 1000px) {
+    .signup-div{
+        width: 50%;
+        margin: 50px auto;
+
+
+    }
+    .signup-div h3{
+        font-size: 24px;
+        font-weight: 600;
+           }
+    .signup-div form{
+        width: calc(100% - 20px);
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .signup-div button{
+
+        margin: 8px 132px;
+
+
+
+    }
+}
+
+
