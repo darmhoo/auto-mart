@@ -11,17 +11,14 @@
 
 </head>
 <body>
+<div class="navbar-toggle">
+    <i class="fas fa-bars"></i>
+</div>
 <header class="dashboard" id="home">
-    <div class="navbar-toggle">
-        <i class="fas fa-bars"></i>
-    </div>
-
-
     <nav class="dashboard-nav">
         <h2><a href="#home"> AutoMart</a></h2>
         <ul>
-            <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
-            <li><a href="#"><i class="fas fa-plus"></i> Post an Ad</a> </li>
+            <li><a href="dashboard.html"><i class="fas fa-home"></i> Home</a></li>
             <li><a href="#"><i class="fas fa-ad"></i> My Ads</a> </li>
             <li><a href="#"><i class="fas fa-shopping-cart"></i> My orders</a> </li>
             <li><a href="#"><i class="fas fa-ad"></i> Ads</a> </li>
@@ -31,17 +28,17 @@
 
     </nav>
 </header>
-<section class="dashboard-container">
+<section class="post-ad">
     <h3>Post A Car</h3>
     <form id="usrform">
         <div>
             <label for="car_model">
                 Car Make
-            </label>
+            </label><br>
             <input name="car_model" id="car_model" placeholder="Ex: Sienna, Honda">
         </div>
         <div>
-            <label for="state">State</label>
+            <label for="state">State</label><br>
             <select name="state" id="state" >
                 <option>--select--</option>
                 <option>New</option>
@@ -50,15 +47,15 @@
 
         </div>
         <div>
-            <label for="manufacturer">Manufacturer</label>
+            <label for="manufacturer">Manufacturer</label><br>
             <input id="manufacturer" name="manufacturer">
         </div>
         <div>
-            <label for="body_type">Body-Type</label>
+            <label for="body_type">Body-Type</label><br>
             <input id="body_type" name="body_type">
         </div>
         <div>
-            <label for="price">Price</label>
+            <label for="price">Price</label><br>
             <input id="price" name="price" >
         </div>
         <div>
@@ -77,6 +74,6 @@
 
 
 
-
+<script src="assets/js/main.js"></script>
 </body>
 </html>
