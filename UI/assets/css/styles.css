@@ -440,10 +440,6 @@ header nav ul li a{
         line-height: 60px;
 
     }
-    header li a:hover{
-        background-color: aquamarine;
-        color: #f2f2f2;
-    }
 }
 
 /*INDEX*/
@@ -501,15 +497,7 @@ header nav ul li a{
 }
 .index-features div p{
     text-align: center;
-    color: #4C3139;
 
-
-}
-@media only screen and (min-width: 1000px) {
-    .index-features div{
-        margin: 8px 4px 0;
-        width: calc(100% - 4px);
-    }
 
 }
 
@@ -568,4 +556,282 @@ footer small{
     }
 
 
+}
+
+/* Sigup */
+.signup-div{
+    width: 100%;
+    color: #4C3139;
+
+
+}
+.signup-div h3{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 72px;
+    color: #4C3139;
+    text-align: center;
+    text-transform: uppercase;
+}
+.signup-div form{
+    margin: 10px;
+    width: calc(100% - 30px);
+
+}
+.signup-div form input{
+    width: calc(100% - 20px);
+    padding: 2px 2px 4px 2px;
+    margin-right: 10px;
+    margin-left: 10px;
+    height: 36px;
+    border-radius: 10px;
+    font-size: 18px;
+    box-shadow: #4C3139 ;
+
+}
+.signup-div button{
+    width: 50%;
+    font-size: 18px;
+    margin: 4px 80px;
+    border-radius: 10px;
+    background-color: #75878C;
+    color: #4C3139;
+
+}
+.signup-div p{
+    text-align: center;
+}
+
+@media only screen and (min-width: 1000px) {
+    .signup-div{
+        width: 50%;
+        margin: 50px auto;
+
+
+    }
+    .signup-div h3{
+        font-size: 24px;
+        font-weight: 600;
+           }
+    .signup-div form{
+        width: calc(100% - 20px);
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .signup-div button{
+
+        margin: 8px 132px;
+
+
+
+    }
+}
+/* DASHBOARD*/
+
+.dashboard{
+    height: auto;
+    width: 100%;
+    background-color: #75878C;
+    position: relative;
+    top: 0;
+    left: 20px
+
+
+
+
+}
+
+.dashboard i{
+    color: #CBC78D;
+    margin: 0 2px;
+}
+.navbar-toggle{
+    float: left;
+    margin: 8px 0 0 8px;
+
+}
+.dashboard-container{
+    font-family: 'Roboto', sans-serif;
+    margin-left: 0;
+
+}
+.dashboard-container h2{
+    font-size: 16px;
+}
+.dashboard-row{
+    width: 100%;
+
+
+
+}
+.dashboard-col{
+    width: 100%;
+    background-color: #eeeeee;
+    margin: 8px;
+
+    padding: 8px;
+}
+.dashboard-col img{
+    width: 20px;
+    height: 20px;
+}
+.dashboard-col p{
+    text-align: center;
+    font-size: 10px;
+}
+.dashboard-container h2{
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 16px;
+    margin-top: 16px;
+}
+.dashboard-col h3{
+    margin: 4px 0 16px 16px;
+}
+.dashboard-nav li a{
+    font-size: 12px;
+    padding-bottom: 12px;
+}
+
+table{
+    width: 100%;
+}
+th{
+    height: 30px;
+    text-transform: capitalize;
+}
+th, td{
+    text-align: left;
+    padding: 4px;
+}
+
+.dashboard h2 a{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #CBC78D;
+    font-weight: 900;
+    text-transform: uppercase;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding: 8px 0;
+}
+.dashboard a:hover{
+    background-color: #4C3139;
+    color: #CBC78D;
+}
+
+
+@media only screen and (min-width: 1000px) {
+    .dashboard{
+
+        height: 100%;
+        width: 160px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        overflow-x: hidden;
+        padding-top: 20px;
+
+    }
+    .dashboard-container{
+        font-family: 'Roboto', sans-serif;
+        margin-left: 164px;
+    }
+    .dashboard i{
+        color: #CBC78D;
+        margin: 0 0;
+    }
+    .dashboard-row{
+        width: 100%;
+        display: inline-flex;
+        justify-content: space-around;
+
+
+    }
+    .dashboard-col{
+        width: 50%;
+        background-color: #eeeeee;
+        margin: 8px;
+
+        padding: 8px;
+    }
+    .dashboard-col img{
+        width: 20px;
+        height: 20px;
+    }
+    .dashboard-col p{
+        text-align: center;
+        font-size: 10px;
+    }
+    .dashboard-container h2{
+        font-size: 18px;
+        text-align: center;
+        margin-bottom: 16px;
+        margin-top: 16px;
+    }
+    .dashboard-col h3{
+        margin: 4px 0 16px 16px;
+    }
+
+    table{
+        width: 100%;
+    }
+    th{
+        height: 30px;
+        text-transform: capitalize;
+    }
+    th, td{
+        text-align: left;
+        padding: 4px;
+    }
+
+    .dashboard h2 a{
+        font-family: 'Roboto', sans-serif;
+        font-size: 18px;
+        color: #CBC78D;
+        font-weight: 900;
+        text-transform: uppercase;
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        padding: 20px 0;
+    }
+    .dashboard a:hover{
+        background-color: #4C3139;
+        color: #CBC78D;
+    }
+
+}
+/*Post Ad */
+.post-ad{
+    margin: 50px 20px 2px 20px;
+}
+.post-ad h3{
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+form label{
+    font-family: Roboto sans-serif;
+}
+form div{
+    margin: 8px 4px;
+    width: calc(100% - 8px);
+}
+form input{
+    width: 75%;
+    height: 24px;
+
+}
+textarea{
+    width: 100%;
+    height: 64px;
+}
+@media only screen and (min-width: 1000px) {
+    .post-ad{
+        margin: 50px 20px 2px 164px;
+    }
 }
