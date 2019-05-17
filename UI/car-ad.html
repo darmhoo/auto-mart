@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AutoMart | Post Ad</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+
+</head>
+<body>
+<header class="dashboard" id="home">
+    <div class="navbar-toggle">
+        <i class="fas fa-bars"></i>
+    </div>
+
+
+    <nav class="dashboard-nav">
+        <h2><a href="#home"> AutoMart</a></h2>
+        <ul>
+            <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#"><i class="fas fa-plus"></i> Post an Ad</a> </li>
+            <li><a href="#"><i class="fas fa-ad"></i> My Ads</a> </li>
+            <li><a href="#"><i class="fas fa-shopping-cart"></i> My orders</a> </li>
+            <li><a href="#"><i class="fas fa-ad"></i> Ads</a> </li>
+            <li><a href="#"><i class="far fa-id-badge"></i> Profile</a> </li>
+            <li><a href="#"><i class="fas fa-sign-out-alt"></i> Sign Out</a> </li>
+        </ul>
+
+    </nav>
+</header>
+<section class="dashboard-container">
+    <h3>Post A Car</h3>
+    <form id="usrform">
+        <div>
+            <label for="car_model">
+                Car Make
+            </label>
+            <input name="car_model" id="car_model" placeholder="Ex: Sienna, Honda">
+        </div>
+        <div>
+            <label for="state">State</label>
+            <select name="state" id="state" >
+                <option>--select--</option>
+                <option>New</option>
+                <option>Fairly used</option>
+            </select>
+
+        </div>
+        <div>
+            <label for="manufacturer">Manufacturer</label>
+            <input id="manufacturer" name="manufacturer">
+        </div>
+        <div>
+            <label for="body_type">Body-Type</label>
+            <input id="body_type" name="body_type">
+        </div>
+        <div>
+            <label for="price">Price</label>
+            <input id="price" name="price" >
+        </div>
+        <div>
+            <label for="description">Description</label>
+            <textarea name="description" form="usrform" placeholder="enter text here..." id="description">
+
+            </textarea>
+        </div>
+        <div>
+            <button id="btn">Submit</button>
+        </div>
+
+
+    </form>
+</section>
+
+
+
+
+</body>
+</html>

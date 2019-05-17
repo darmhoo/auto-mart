@@ -1,5 +1,5 @@
 function classToggle() {
-    const nav = document.querySelector('.dashboard-nav');
+    const nav = document.querySelector('.dashboard');
     if (nav.style.display === "none"){
         nav.style.display = "block"
     }else{
