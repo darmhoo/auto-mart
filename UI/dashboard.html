@@ -4,74 +4,189 @@
     <meta charset="UTF-8">
     <title>AutoMart | Dashboard</title>
     <link rel="stylesheet" href="assets/css/styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
 
 </head>
 <body>
 
-<header id="home">
-    <a href="#home" class="header-brand"> AutoMart</a>
-    <small> Welcome, User</small>
+
+<header class="dashboard" id="home">
+    <div class="navbar-toggle">
+        <i class="fas fa-bars"></i>
+    </div>
+
+
     <nav class="dashboard-nav">
+        <h2><a href="#home"> AutoMart</a></h2>
         <ul>
-            <li><a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                <i class="fa fa-bars"></i>
-            </a> </li>
-            <li><a href="#">Post a car</a> </li>
-            <li><a href="#">View latest adds</a> </li>
-            <li></li>
+            <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#"><i class="fas fa-plus"></i> Post an Ad</a> </li>
+            <li><a href="#"><i class="fas fa-ad"></i> My Ads</a> </li>
+            <li><a href="#"><i class="fas fa-shopping-cart"></i> My orders</a> </li>
+            <li><a href="#"><i class="fas fa-ad"></i> Ads</a> </li>
+            <li><a href="#"><i class="far fa-id-badge"></i> Profile</a> </li>
+            <li><a href="#"><i class="fas fa-sign-out-alt"></i> Sign Out</a> </li>
         </ul>
+
     </nav>
 </header>
 <main>
+    <div class="dashboard-container">
+        <h2>Welcome, User</h2>
+        <section class="admin-board-nav">
 
-
-    <section class="dashboard-my-ads">
-        <h2>My Ads</h2>
-        <div class="ad-card ">
-            <img src="assets/images/car1.jpg" alt="car_titie">
-            <h3>car title</h3>
-            <p>price tag</p>
-
+        </section>
+        <div class="dashboard-row">
+            <section class="dashboard-col">
+                <h3>Latest Ads</h3>
+                <table>
+                    <tr>
+                        <th>car make</th>
+                        <th>state</th>
+                        <th>price</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="assets/images/car1.jpg" alt="car thumbnail">
+                            <span>Toyota Corolla</span>
+                        </td>
+                        <td>New</td>
+                        <td>#31,000</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="assets/images/car1.jpg" alt="car thumbnail">
+                            <span>Toyota Corolla</span>
+                        </td>
+                        <td>New</td>
+                        <td>#31,000</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="assets/images/car1.jpg" alt="car thumbnail">
+                            <span>Toyota Corolla</span>
+                        </td>
+                        <td>New</td>
+                        <td>#31,000</td>
+                    </tr>
+                </table>
+                <p><a href="#">view all ads</a></p>
+            </section>
+            <section class="dashboard-col">
+                <h3>My Orders</h3>
+                <table>
+                    <tr>
+                        <th>car info</th>
+                        <th>state</th>
+                        <th>price</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="assets/images/car1.jpg" alt="car thumbnail">
+                            <span>Toyota Corolla</span>
+                        </td>
+                        <td>New</td>
+                        <td>#31,000</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="assets/images/car1.jpg" alt="car thumbnail">
+                            <span>Toyota Corolla</span>
+                        </td>
+                        <td>New</td>
+                        <td>#31,000</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="assets/images/car1.jpg" alt="car thumbnail">
+                            <span>Toyota Corolla</span>
+                        </td>
+                        <td>New</td>
+                        <td>#31,000</td>
+                    </tr>
+                </table>
+                <p><a href="#">view all orders</a></p>
+            </section>
         </div>
-
-        <div class="ad-card ">
-                <img src="assets/images/car2.jpg" alt="car_titie">
-                <h3>car title</h3>
-                <p>price tag</p>
-
-            </div>
-
-        <div class="ad-card ">
-                <img src="assets/images/car1.jpg" alt="car_titie">
-                <h3>car title</h3>
-                <p>price tag</p>
-
-            </div>
-        <p><a href="#">View more...</a> </p>
-
-
-    </section>
-    <section class="dashboard-my-ads">
-        <h2>My Ads</h2>
-        <div class="ad-card ">
-            <img src="assets/images/car1.jpg" alt="car_titie">
-            <h3><a href="#">car title</a></h3>
-            <p>price tag</p>
-
-            </div>
-        </a>
-        <p><a href="#">View more...</a> </p>
-        <a href="car-ad.html"><button><i class="fa fa-plus"></i> Post a car</button></a>
-
-
-    </section>
+        <div class="dashboard-row">
+            <section class="dashboard-col">
+                <h3>My Ads</h3>
+                <table>
+                    <tr>
+                        <th>car make</th>
+                        <th>state</th>
+                        <th>price</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="assets/images/car1.jpg" alt="car thumbnail">
+                            <span>Toyota Corolla</span>
+                        </td>
+                        <td>New</td>
+                        <td>#31,000</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="assets/images/car1.jpg" alt="car thumbnail">
+                            <span>Toyota Corolla</span>
+                        </td>
+                        <td>New</td>
+                        <td>#31,000</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="assets/images/car1.jpg" alt="car thumbnail">
+                            <span>Toyota Corolla</span>
+                        </td>
+                        <td>New</td>
+                        <td>#31,000</td>
+                    </tr>
+                </table>
+                <p><a href="#">view all your Ads</a></p>
+            </section>
+            <section class="dashboard-col">
+                <h3>History</h3>
+                <table>
+                    <tr>
+                        <th>car make</th>
+                        <th>state</th>
+                        <th>price</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="assets/images/car1.jpg" alt="car thumbnail">
+                            <span>Toyota Corolla</span>
+                        </td>
+                        <td>New</td>
+                        <td>#31,000</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="assets/images/car1.jpg" alt="car thumbnail">
+                            <span>Toyota Corolla</span>
+                        </td>
+                        <td>New</td>
+                        <td>#31,000</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="assets/images/car1.jpg" alt="car thumbnail">
+                            <span>Toyota Corolla</span>
+                        </td>
+                        <td>New</td>
+                        <td>#31,000</td>
+                    </tr>
+                </table>
+                <p><a href="#">view all history</a></p>
+            </section>
+        </div>
+    </div>
 </main>
 
 
-
+<script src="assets/js/main.js"></script>
 </body>
 </html>
