@@ -1,14 +1,14 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for auto-mart/sum.js</title>
+    <title>Code coverage report for auto-mart/helpers/middlewares.js</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="..\prettify.css" />
-    <link rel="stylesheet" href="..\base.css" />
+    <link rel="stylesheet" href="..\..\prettify.css" />
+    <link rel="stylesheet" href="..\..\base.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style type='text/css'>
         .coverage-summary .sorter {
-            background-image: url(..\sort-arrow-sprite.png);
+            background-image: url(..\..\sort-arrow-sprite.png);
         }
     </style>
 </head>
@@ -16,28 +16,28 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="..\index.html">All files</a> / <a href="index.html">auto-mart</a> sum.js
+      <a href="..\..\index.html">All files</a> / <a href="index.html">auto-mart/helpers</a> middlewares.js
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>6/6</span>
+        <span class='fraction'>5/5</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>2/2</span>
+        <span class='fraction'>7/7</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>2/2</span>
+        <span class='fraction'>1/1</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>6/6</span>
+        <span class='fraction'>5/5</span>
       </div>
     </div>
     <p class="quiet">
@@ -64,41 +64,47 @@
 <a name='L16'></a><a href='#L16'>16</a>
 <a name='L17'></a><a href='#L17'>17</a>
 <a name='L18'></a><a href='#L18'>18</a>
-<a name='L19'></a><a href='#L19'>19</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/* sum.js */
-&nbsp;
-module.exports = function () {
-&nbsp;
-  // Convert arguments object to an array
-  let args = Array.prototype.slice.call(arguments);
-&nbsp;
-  // Throw error if arguments contain non-finite number values
-  if (!args.every(Number.isFinite)) {
-    throw new TypeError('sum() expects only numbers.');
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">function checkFieldsPost(req, res, next) {
+  const {
+    firstname,
+    lastname,
+    password,
+    email,
+    isAdmin,
+  } = req.body;
+  if (firstname &amp;&amp; lastname &amp;&amp; password &amp;&amp; email &amp;&amp; isAdmin) {
+    next();
+  } else {
+    res.status(400).json({
+      status: 400,
+      message: 'field missing',
+    });
   }
-&nbsp;
-  // Return the sum of the arguments
-  return args.reduce((a, b) =&gt; {
-        return a + b
-    }, 0);
-&nbsp;
+}
+module.exports = {
+  checkFieldsPost,
 };
 &nbsp;</pre></td></tr>
 </table></pre>
@@ -106,10 +112,10 @@ module.exports = function () {
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat May 18 2019 12:41:11 GMT+0100 (W. Central Africa Standard Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue May 21 2019 14:46:12 GMT+0100 (W. Central Africa Standard Time)
 </div>
 </div>
-<script src="..\prettify.js"></script>
+<script src="..\..\prettify.js"></script>
 <script>
 window.onload = function () {
         if (typeof prettyPrint === 'function') {
@@ -117,7 +123,7 @@ window.onload = function () {
         }
 };
 </script>
-<script src="..\sorter.js"></script>
-<script src="..\block-navigation.js"></script>
+<script src="..\..\sorter.js"></script>
+<script src="..\..\block-navigation.js"></script>
 </body>
 </html>
