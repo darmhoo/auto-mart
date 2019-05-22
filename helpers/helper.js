@@ -36,6 +36,11 @@ const tokenGen = () => {
   return tokgen.generate();
 };
 
+function checkDuplicateEmail(email) {
+  // TODO create a function to search for duplicate email. email must be unique;
+
+}
+
 module.exports = {
   getNewId,
   newDate,
