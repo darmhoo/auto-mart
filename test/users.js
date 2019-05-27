@@ -54,5 +54,27 @@ describe('Users', () => {
           done();
         });
     });
+
+    it('it should log in a user using email ad password', (done) => {
+      const user = {
+        password: 'larami',
+        email: 'darmhoo@yahoo.com',
+      };
+      chai.request(server)
+        .post('/api/v1/auth/signin')
+        .send(user)
+        .end((err, res) => {
+          res.should.have.status(200);
+          res.body.should.be.a('object');
+          res.body.should.have.property('data');
+          // res.body.data.should.have.property('token');
+          // res.body.data.should.have.property('first_name');
+          // res.body.data.should.have.property('last_name');
+          // res.body.data.should.have.property('email');
+          // res.body.data.should.have.property('id');
+          // res.body.errors.should.have.property('errors');
+          done();
+        });
+    });
   });
 });

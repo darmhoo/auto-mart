@@ -1,5 +1,6 @@
 const fs = require('fs');
 const TokenGenerator = require('uuid-token-generator');
+const file = require('../data/users.json');
 
 const getNewId = (array) => {
   if (array.length > 0) {
@@ -36,10 +37,25 @@ const tokenGen = () => {
   return tokgen.generate();
 };
 
-function checkDuplicateEmail(email) {
-  // TODO create a function to search for duplicate email. email must be unique;
+function checkEmailIndex(email) {
+  const js = JSON.parse(file);
+  let key = 0;
+  const emailKey = js.forEach((item, index) => {
+    if (item.email === email) {
+      key = index;
+    }
+    return key;
+  });
 
+  if (emailKey) {
+    return emailKey;
+  }
+  return 'Not found';
+
+
+  // TODO create a function to search for duplicate email. email must be unique;
 }
+
 
 module.exports = {
   getNewId,
@@ -47,4 +63,5 @@ module.exports = {
   mustBeInArray,
   tokenGen,
   writeJSONFile,
+  checkEmailIndex,
 };

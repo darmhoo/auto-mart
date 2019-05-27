@@ -1,5 +1,6 @@
 const users = require('../data/users.json');
 
+
 const helper = require('../helpers/helper');
 
 function insertUser(newUser) {
@@ -21,6 +22,9 @@ function insertUser(newUser) {
     resolve(newUser);
   });
 }
+
+
 module.exports = {
   insertUser,
+
 };
