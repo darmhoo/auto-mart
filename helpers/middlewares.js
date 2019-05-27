@@ -1,5 +1,5 @@
 const expressJwt = require('express-jwt');
-const data = require('../data/users.json');
+
 const { secret } = require('../config.json');
 
 function checkFieldsPost(req, res, next) {
@@ -10,7 +10,7 @@ function checkFieldsPost(req, res, next) {
     email,
     isAdmin,
   } = req.body;
-  const user = data.find((item) => { item.email === email; });
+
   if (firstname && lastname && password && email && isAdmin) {
     next();
   } else {
@@ -36,24 +36,9 @@ function authorize(roles = []) {
     },
   ];
 }
-
-function validateUser(req, res, next) {
-  const {
-    email,
-    password,
-
-  } = req.body;
-  if (email && password) {
-    next();
-  } else {
-    res.status(400).json({
-      status: 400,
-      message: 'bad request',
-    });
-  }
-}
 module.exports = {
-  checkFieldsPost,
-  validateUser,
   authorize,
+  checkFieldsPost,
+
+
 };

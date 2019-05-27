@@ -7,7 +7,6 @@ const authenticate = require('../controllers/users');
 
 /* GET users listing. */
 router.post('/signup', m.checkFieldsPost, async (req, res) => {
-  const { id } = req.params;
   await user.insertUser(req.body).then(person => res.status(201).json({
     status: res.statusCode,
     data: {

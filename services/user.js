@@ -26,7 +26,7 @@ async function getAll() {
 }
 
 async function getById(id) {
-  const user = userData.find(u => u.id === parseInt(id));
+  const user = userData.find(u => u.id === parseInt(id, 10));
   if (!user) return;
   const { password, ...userWithoutPassword } = user;
   return userWithoutPassword;

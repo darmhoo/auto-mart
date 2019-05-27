@@ -1,7 +1,4 @@
 const userService = require('../services/user');
-const middlewares = require('../helpers/middlewares');
-
-const Role = require('../helpers/role');
 
 
 function signin(req, res, next) {

@@ -76,5 +76,20 @@ describe('Users', () => {
           done();
         });
     });
+
+    it('it should not log in a user using email and a wrong password', (done) => {
+      const user = {
+        password: 'laami',
+        email: 'darmhoo@yahoo.com',
+      };
+      chai.request(server)
+        .post('/api/v1/auth/signin')
+        .send(user)
+        .end((err, res) => {
+          res.should.have.status(400);
+          res.body.should.be.a('object');
+          done();
+        });
+    });
   });
 });
