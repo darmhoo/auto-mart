@@ -1,7 +1,6 @@
 const jwt = require('jsonwebtoken');
 const config = require('../config.json');
 
-const Role = require('../helpers/role');
 
 const userData = require('../data/users.json');
 
