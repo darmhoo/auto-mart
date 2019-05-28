@@ -3,12 +3,12 @@ const express = require('express');
 const router = express.Router();
 const user = require('../models/users');
 const m = require('../helpers/middlewares');
+const authenticate = require('../controllers/users');
 
 /* GET users listing. */
 router.post('/signup', m.checkFieldsPost, async (req, res) => {
-  const { id } = req.params;
   await user.insertUser(req.body).then(person => res.status(201).json({
-    status: 201,
+    status: res.statusCode,
     data: {
       token: person.token,
       id: person.id,
@@ -23,9 +23,7 @@ router.post('/signup', m.checkFieldsPost, async (req, res) => {
       status: err,
     }));
 });
+router.post('/signin', authenticate.signin);
+
 
 module.exports = router;
-
-router.get('/signin', (req, res, next) => {
-  res.send('this is a post request');
-});
