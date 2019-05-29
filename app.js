@@ -9,7 +9,7 @@ const logger = require('morgan');
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 // const ordersRouter = require('./routes/orders');
-// const carsRouter = require('./routes/cars');
+const carsRouter = require('./routes/cars');
 // const flagRouter = require('./routes/flags');
 
 const app = express();
@@ -24,6 +24,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/api/v1/auth/', usersRouter);
+// app.use('/api/v1/car/', carsRouter);
 // app.use('/api/v1/car/', carsRouter);
 // app.use('/api/v1/order/', ordersRouter);
 // app.use('/api/v1/flag/', flagRouter);

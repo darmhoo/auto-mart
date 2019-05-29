@@ -1,6 +1,7 @@
 const fs = require('fs');
 const TokenGenerator = require('uuid-token-generator');
 const file = require('../data/users.json');
+const cloudinary = require('../helpers/cloudinary.config');
 
 const getNewId = (array) => {
   if (array.length > 0) {
@@ -56,6 +57,12 @@ function checkEmailIndex(email) {
   // TODO create a function to search for duplicate email. email must be unique;
 }
 
+function uploadPic(path) {
+  cloudinary.uploader.upload(path, (error, result) => {
+    console.log(result, error);
+  });
+}
+
 
 module.exports = {
   getNewId,
@@ -64,4 +71,5 @@ module.exports = {
   tokenGen,
   writeJSONFile,
   checkEmailIndex,
+  uploadPic,
 };
